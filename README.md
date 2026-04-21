@@ -29,3 +29,16 @@ Estamos construyendo la mejor experiencia de educación financiera y tu opinión
 
 ---
 © 2026 Finzi · Educación Financiera Gamificada
+
+## 🚀 Despliegue Automático (CI/CD)
+
+El proyecto está listo para desplegarse automáticamente en **Vercel** en cada `git push` a la rama `main`.
+
+### Pasos para conectar el repositorio en Vercel Dashboard:
+1. Ve a [Vercel](https://vercel.com/dashboard).
+2. Haz clic en **"Add New..." > Project**.
+3. Selecciona tu repositorio remoto de GitHub (o importa `finzi-landing`).
+4. Haz clic en **Deploy**.
+5. Ve a **Settings > Git** y asegúrate de que el repositorio esté conectado.
+
+Una vez configurado, cualquier cambio que subas al repo se reflejará instantáneamente en producción.
