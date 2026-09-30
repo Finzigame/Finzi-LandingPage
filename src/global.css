@@ -1,0 +1,21 @@
+@font-face {
+  font-family: "Fredoka-Medium";
+  src: url("/fonts/Fredoka-Medium.ttf") format("truetype");
+  font-display: swap;
+}
+@font-face {
+  font-family: "Fredoka-Regular";
+  src: url("/fonts/Fredoka-Regular.ttf") format("truetype");
+  font-display: swap;
+}
+/* La landing hace scroll dentro de .finzi-landing, asi que la pagina ocupa exactamente la ventana */
+html,
+body,
+#root {
+  height: 100%;
+  margin: 0;
+}
+body {
+  overflow: hidden;
+  background: #071b3b;
+}

@@ -1,6 +1,7 @@
 {
-  "version": 2,
-  "name": "finzi-landing",
+  "framework": "vite",
+  "buildCommand": "npm run build",
+  "outputDirectory": "dist",
   "cleanUrls": true,
   "trailingSlash": false
 }

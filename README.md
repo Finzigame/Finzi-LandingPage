@@ -16,9 +16,19 @@
 
 ## 🛠️ Tecnologías Utilizadas
 
-- **HTML5:** Estructura semántica.
-- **CSS3:** Diseño moderno, animaciones fluidas y layout responsivo (Vanilla CSS).
-- **Google Fonts:** Tipografía Nunito para una lectura clara y amigable.
+- **Vite + React + TypeScript**: la landing es un solo componente (`src/Landing.tsx`) con su CSS (`src/landing.css`).
+- **Fredoka** (misma tipografía de la app) servida desde `public/fonts`.
+- Imágenes optimizadas en `public/landing` (`.webp`). Los PNG originales están en `assets-originales/` y no se publican.
+
+## 💻 Desarrollo local
+
+```bash
+npm install
+npm run dev
+```
+
+Los botones "Entrar a Finzi", "Empezar mi aventura" y "Vamos a crecer" llevan a la versión web del juego.
+Su URL se define en la variable `VITE_APP_URL` (ver `.env.example`). En desarrollo, si no existe, apunta a `http://localhost:8092`.
 
 ## 📱 Participa en el Focus Group
 
@@ -32,13 +42,6 @@ Estamos construyendo la mejor experiencia de educación financiera y tu opinión
 
 ## 🚀 Despliegue Automático (CI/CD)
 
-El proyecto está listo para desplegarse automáticamente en **Vercel** en cada `git push` a la rama `main`.
+Vercel despliega en cada `git push` a `main` (`vercel.json` ya indica `npm run build` y la carpeta `dist`).
 
-### Pasos para conectar el repositorio en Vercel Dashboard:
-1. Ve a [Vercel](https://vercel.com/dashboard).
-2. Haz clic en **"Add New..." > Project**.
-3. Selecciona tu repositorio remoto de GitHub (o importa `finzi-landing`).
-4. Haz clic en **Deploy**.
-5. Ve a **Settings > Git** y asegúrate de que el repositorio esté conectado.
-
-Una vez configurado, cualquier cambio que subas al repo se reflejará instantáneamente en producción.
+**Antes del primer deploy:** en Vercel > Settings > Environment Variables agrega `VITE_APP_URL` con la URL de la versión web de Finzi. Sin ella el build falla a propósito, para no publicar un botón "Jugar" que no lleva a ningún lado.
